@@ -40,7 +40,8 @@ export default {
     },
     remaining() {
       let today = new Date()
-      return Math.round((this.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+      let remaining = Math.round((this.date.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
+      return Math.max(0, remaining)
     }
   }
 }
