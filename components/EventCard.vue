@@ -23,11 +23,9 @@
   color: #fff;
   border-radius: calc(.25rem - 1px);
   text-shadow: 1px 1px 2px rgba(0,0,0,.3);
-  transform: scale(.9);
-  transition: all 50ms linear;
 
   &:hover, &:active, &:focus {
-    transform: scale(1);
+    transform: scale(1.05);
     -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .6);
     box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .6);
   }

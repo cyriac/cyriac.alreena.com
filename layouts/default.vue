@@ -5,9 +5,9 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Slabo+13px');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+13px');
 body, html {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .no-gutters {
   margin-right: 0;
@@ -19,6 +19,7 @@ body, html {
   }
 }
 .card {
+  border: 0;
   -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2);
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .2);
 }

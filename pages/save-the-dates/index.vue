@@ -1,72 +1,40 @@
 <template>
-  <div class="row no-gutters">
-    <div class="col-12 col-md-6 heading">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="display-3">Save the dates</h1>
-          <span class="d-block d-md-none scroll">
-            <span class="oi oi-chevron-bottom"></span>
-          </span>
+  <div class="container">
+    <div class="row justify-content-lg-start justify-content-sm-center">
+      <div class="col-12 col-sm-8 col-lg-4">
+        <div class="jumbotron p-4 bg-white">
+          <div class="col-md-12 px-0">
+            <h1 class="display-4">Save the dates</h1>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-12 col-md-6 cards">
-      <div class="row justify-content-center">
-        <div class="col-11 col-md-8">
-          <EventCard :eventKey="'engagement'"/>
-        </div>
-        <div class="col-12"><hr class="invisible"/></div>
-        <div class="col-11 col-md-8">
-          <EventCard :eventKey="'wedding'"/>
-        </div>
-        <div class="col-12"><hr class="invisible"/></div>
-        <div class="col-11 col-md-8">
-          <EventCard :eventKey="'weddingreception'"/>
-        </div>
+    <div class="row justify-content-lg-start justify-content-sm-center">
+      <div class="col-12 col-sm-8 col-lg-4">
+        <EventCard :eventKey="'engagement'"/>
+      </div>
+      <div class="col-12 col-sm-8 col-lg-4">
+        <EventCard :eventKey="'wedding'"/>
+      </div>
+      <div class="col-12 col-sm-8 col-lg-4">
+        <EventCard :eventKey="'weddingreception'"/>
       </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.row {
-  min-height: 100vh;
+.container {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
-.cards {
-  background: #f1f1f1;
-  position: absolute;
-  width: 50%;
-  right: 0;
-  padding: 5vh 0;
+.jumbotron {
+  border: 10px solid #000;
+  border-radius: 0 !important;
+  text-transform: uppercase;
 }
-.heading {
-  background: #f1f1f1 url(/img/IMG_3379.jpg);
-  background-size: cover;
-  position: fixed;
-  width: 50%;
-  left: 0;
-  text-align: center;
-  color: #fff;
-  height: 100vh;
-  text-shadow: 1px 1px 2px rgba(0,0,0,.3);
-  h1 {
-    width: 95%;
-    font-weight: bold;
-    position: absolute;
-    bottom: 0;
-    padding: 0 20px 50px;
-  }
-  .scroll {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-}
-.cards, .heading {
-  @media (max-width: 769px) {
-    position: static;
-    width: 100%;
-  }
+.card {
+  margin-bottom: 5vh;
 }
 </style>
 
