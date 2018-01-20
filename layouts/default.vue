@@ -5,6 +5,10 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|Slabo+13px');
+body, html {
+  font-family: 'Nunito Sans', sans-serif;
+}
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
