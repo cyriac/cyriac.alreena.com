@@ -1,7 +1,7 @@
 <template>
   <div class="counter">
     <span class="remaining">{{ remaining }} days</span>
-    <span class="date">{{ cdate }}</span>
+    <nuxt-link to="/save-the-dates" class="date">{{ cdate }}</nuxt-link>
   </div>
 </template>
 
@@ -11,16 +11,16 @@
   display: block;
   font-size: 5rem;
   color: #AAA;
-  span {
-    font-family: 'Slabo 27px', serif;
-    cursor: wait;
-  }
+  font-family: 'Slabo 27px', serif;
   .date {
     display: none
   }
   &:hover, &:focus {
     .date {
       display: inline-block;
+      -webkit-text-decoration-skip: ink;
+      text-decoration-skip: ink;
+      color: #AAA;
     }
     .remaining {
       display: none;
