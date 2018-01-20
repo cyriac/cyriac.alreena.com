@@ -27,9 +27,5 @@ export default {
   align-items: center;
   text-align: center;
   max-width: 100%;
-  filter: grayscale(100%);
-  &:hover, &:active, &:focus {
-    filter: grayscale(0)
-  }
 }
 </style>
