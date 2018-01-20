@@ -21,19 +21,19 @@
 .card {
   border: 0;
   color: #fff;
-  border-radius: calc(.25rem - 1px);
+  border-radius: 0;
   text-shadow: 1px 1px 2px rgba(0,0,0,.3);
   filter: grayscale(100%);
 
   &:hover, &:active, &:focus {
     transform: scale(1.05);
-    filter: grayscale(40%);
+    filter: grayscale(0%);
     -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .6);
     box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .6);
   }
 
   .card-img-top {
-    border-radius: calc(.25rem - 1px);
+    border-radius: 0;
   }
 
   .card-body {
@@ -41,7 +41,6 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .2);
-    border-radius: calc(.25rem - 1px);
     .info {
       font-size: 14px;
       .oi {
@@ -57,6 +56,9 @@
     font-size: 2rem;
     font-weight: bold;
   }
+}
+.btn {
+  border-radius: 0;
 }
 </style>
 

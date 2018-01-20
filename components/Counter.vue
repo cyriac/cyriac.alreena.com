@@ -10,7 +10,7 @@
   display: block;
   font-size: 5rem;
   font-weight: 800;
-  color: #AAA;
+  color: #FFF;
   font-family: 'Slabo 13px', serif;
   .date {
     display: none
@@ -20,7 +20,7 @@
       display: inline-block;
       -webkit-text-decoration-skip: ink;
       text-decoration-skip: ink;
-      color: #AAA;
+      color: #FFF;
     }
     .remaining {
       display: none;

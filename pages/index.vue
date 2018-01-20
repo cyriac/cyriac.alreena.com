@@ -16,12 +16,20 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
+  background: url('/img/jason-leung-397006.jpg') no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 100%;
+  filter: grayscale(100%);
+  &:hover, &:active, &:focus {
+    filter: grayscale(0)
+  }
 }
 </style>
