@@ -6,11 +6,13 @@
 </template>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 .counter {
   display: block;
   font-size: 5rem;
   color: #AAA;
   span {
+    font-family: 'Slabo 27px', serif;
     cursor: wait;
   }
   .date {
