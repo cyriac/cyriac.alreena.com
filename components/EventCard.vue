@@ -12,7 +12,7 @@
         <span class="oi oi-map"></span>
         <span>{{ event.location }}</span>
       </div>
-      <button class="btn btn btn-outline-light rsvp">RSVP</button>
+      <button class="btn btn btn-outline-light rsvp" v-on:click="comingsoon">RSVP</button>
     </div>
   </div>
 </template>
@@ -84,6 +84,11 @@ const eventData = {
 
 export default {
   props: ['eventKey'],
+  methods: {
+    comingsoon () {
+      alert("RSVP coming soon")
+    }
+  },
   computed: {
     event () {
       return eventData[this.eventKey]
