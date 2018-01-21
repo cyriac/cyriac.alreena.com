@@ -12,6 +12,7 @@
   font-weight: 800;
   color: #FFF;
   font-family: 'Slabo 13px', serif;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
   .date {
     display: none
   }

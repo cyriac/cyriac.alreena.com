@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .container {
-  background: url('/img/jason-leung-397006.jpg') no-repeat;
+  background: url('/img/pexels-photo-273941.jpg') no-repeat;
   background-size: 100% 100%;
   background-size: cover;
   min-height: 100vh;
