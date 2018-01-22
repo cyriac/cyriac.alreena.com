@@ -19,8 +19,7 @@
   &:hover, &:focus {
     .date {
       display: inline-block;
-      -webkit-text-decoration-skip: ink;
-      text-decoration-skip: ink;
+      text-decoration: none;
       color: #FFF;
     }
     .remaining {
