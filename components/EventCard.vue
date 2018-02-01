@@ -67,7 +67,7 @@ const eventData = {
   engagement: {
     'title': "Engagement",
     'bg': '/img/Cheenavala_Fort-kochi.jpg',
-    'date': null,
+    'date': new Date('19 Aug 2018'),
     'location': 'Kochi'
   },
   wedding: {
