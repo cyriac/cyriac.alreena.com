@@ -62,37 +62,11 @@
 </style>
 
 <script>
-const eventData = {
-  engagement: {
-    'title': "Engagement",
-    'bg': '/img/Cheenavala_Fort-kochi.jpg',
-    'date': new Date('19 Aug 2018'),
-    'location': 'Kochi'
-  },
-  wedding: {
-    'title': "Wedding",
-    'bg': '/img/nitish-kadam-34748.jpg',
-    'date': new Date('19 Jan 2019'),
-    'location': 'Mumbai'
-  },
-  weddingreception: {
-    'title': "Wedding Reception",
-    'bg': '/img/vivek-kumar-234486.jpg',
-    'date': new Date('26 Jan 2019'),
-    'location': 'Kochi'
-  }
-}
-
 export default {
-  props: ['eventKey'],
+  props: ['event'],
   methods: {
     comingsoon () {
       alert("RSVP coming soon")
-    }
-  },
-  computed: {
-    event () {
-      return eventData[this.eventKey]
     }
   }
 }
