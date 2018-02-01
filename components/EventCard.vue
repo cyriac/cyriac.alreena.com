@@ -5,8 +5,7 @@
       <h1 class="card-title display-4">{{ event.title }}</h1>
       <div class="info">
         <span class="oi oi-calendar"></span>
-        <span v-if="event.date">{{ event.date.toLocaleString().split(",")[0] }}</span>
-        <span v-else>TBD</span>
+        <span>{{ event.date.toLocaleString().split(",")[0] }}</span>
       </div>
       <div class="info">
         <span class="oi oi-map"></span>
@@ -79,7 +78,7 @@ const eventData = {
   weddingreception: {
     'title': "Wedding Reception",
     'bg': '/img/vivek-kumar-234486.jpg',
-    'data': null,
+    'date': new Date('26 Jan 2019'),
     'location': 'Kochi'
   }
 }
