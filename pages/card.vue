@@ -31,7 +31,7 @@
               <div class="dates">JANUARY 19 2019 • 17:30 PM</div>
               <div>don bosco crypt • mumbai</div>
               <div>reception to follow</div>
-              <div>mayfair • mumbai</div>
+              <div>taj lands end • mumbai</div>
             </div>
           </div>
         </div>
