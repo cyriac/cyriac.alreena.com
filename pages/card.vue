@@ -44,7 +44,6 @@
 .card {
   margin: 3vh;
   border: 3vh solid #555;
-  font-style: italic;
   border-radius: 0;
   text-shadow: 0 1px 1px #fff, 0 0 0.5px rgba(0,0,0,.5);
   font-family: 'Playfair Display', serif;
@@ -53,7 +52,7 @@
     min-height: 100vh;
     color: #555;
     img {
-      margin: 10vh 0;
+      margin: 20vh 0 10vh 0;
     }
   }
 }
