@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="row address">
-      <div class="col-6 col-sm-3 text-left order-1 order-sm-12">
+    <div class="row address justify-content-end">
+      <div class="col-6 col-sm-3 order-1 order-sm-12 mini-text-right">
         <img src="/img/church.svg" width="60%"/>
       </div>
       <div class="col-sm-9 col-12 text-right order-12 order-sm-1">
@@ -14,8 +14,8 @@
         <a class="btn btn-sm btn-outline-dark" href="https://goo.gl/maps/KnPfCLkyhmH2" target="_blank">Map</a>
       </div>
     </div>
-    <div class="row address">
-      <div class="col-6 col-sm-3 text-left order-1 order-sm-12">
+    <div class="row address justify-content-end">
+      <div class="col-6 col-sm-3 order-1 order-sm-12 mini-text-right">
         <img src="/img/cake.svg" width="60%"/>
       </div>
       <div class="col-sm-9 col-12 text-right order-12 order-sm-1">
@@ -41,6 +41,17 @@
     font-size: 2rem;
     line-height: 2rem;
     font-weight: bold;
+  }
+}
+@media (max-width: 575px) {
+  .mini-text-right {
+    text-align: right;
+  }
+  .address {
+    img {
+      margin: 5vh 0;
+      text-align: right;
+    }
   }
 }
 </style>
