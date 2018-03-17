@@ -1,10 +1,8 @@
 <template>
   <div>
-    <div class="row address justify-content-end">
-      <div class="col-6 col-sm-3 order-1 order-sm-12 mini-text-right">
-        <img src="/img/church.svg" width="60%"/>
-      </div>
-      <div class="col-sm-9 col-12 text-right order-12 order-sm-1">
+    <div class="row address">
+      <div class="col-sm-9 col-12 text-right">
+        <img src="/img/church.svg" width="20%"/>
         <address>
           <span>Crypt</span><br/>
           Shrine Of Don Bosco's Madonna<br />
@@ -14,11 +12,9 @@
         <a class="btn btn-sm btn-outline-dark" href="https://goo.gl/maps/KnPfCLkyhmH2" target="_blank">Map</a>
       </div>
     </div>
-    <div class="row address justify-content-end">
-      <div class="col-6 col-sm-3 order-1 order-sm-12 mini-text-right">
-        <img src="/img/cake.svg" width="60%"/>
-      </div>
-      <div class="col-sm-9 col-12 text-right order-12 order-sm-1">
+    <div class="row address">
+      <div class="col-sm-9 col-12 text-right">
+        <img src="/img/cake.svg" width="20%"/>
         <address>
           <span>Taj Lands End</span><br/>
           Bandstand Fort, Byramji Jeejeebhoy Road<br />
@@ -28,6 +24,9 @@
         <a class="btn btn-sm btn-outline-dark" href="https://goo.gl/maps/iyqXhYxFMyS2" target="_blank">Map</a>
       </div>
     </div>
+    <div class="text-center">
+      <img src="/img/divider.svg" width="30%" class="divider"/>
+    </div>
   </div>
 </template>
 
@@ -36,23 +35,14 @@
   text-shadow: none;
 }
 .address {
-  margin-bottom: 10vh;
   span {
     font-size: 2rem;
     line-height: 2rem;
     font-weight: bold;
   }
 }
-@media (max-width: 575px) {
-  .mini-text-right {
-    text-align: right;
-  }
-  .address {
-    img {
-      margin: 5vh 0;
-      text-align: right;
-    }
-  }
+.divider {
+  margin: 8vh 0 5vh 0;
 }
 </style>
 

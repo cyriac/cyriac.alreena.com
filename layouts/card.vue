@@ -9,11 +9,6 @@
       <div class="col-lg-8 col-md-10 col-12 order-3 order-sm-2">
         <div class="card">
           <div class="card-body">
-            <div class="row">
-              <div class="col-sm-9 col-12 text-right">
-                <img src="/img/leaf.svg" width="20%" class="leaf"/>
-              </div>
-            </div>
             <nuxt />
           </div>
         </div>
@@ -35,9 +30,7 @@
   background-color: #555;
 }
 img {
-  &.leaf {
-    margin: 20vh 0 10vh 0;
-  }
+  margin: 20vh 0 5vh 0;
 }
 .card {
   margin: 3vh 0;

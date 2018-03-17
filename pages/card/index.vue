@@ -2,6 +2,11 @@
   <div>
     <div class="row">
       <div class="col-sm-9 col-12 text-right">
+        <img src="/img/leaf.svg" width="20%" class="leaf"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9 col-12 text-right">
         <div>with their families</div>
       </div>
     </div>
