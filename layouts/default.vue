@@ -5,7 +5,7 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+13px');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+13px|Playfair+Display');
 body, html {
   font-family: 'Montserrat', sans-serif;
 }
