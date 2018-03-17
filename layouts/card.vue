@@ -46,6 +46,8 @@ img {
   text-shadow: 0 1px 1px #fff, 0 0 0.5px rgba(0,0,0,.5);
   font-family: 'Playfair Display', serif;
   background: #F3ECE2;
+  -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .6);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, .6);
   .card-body {
     min-height: 100vh;
     color: #555;
