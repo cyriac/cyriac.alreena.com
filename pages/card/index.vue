@@ -27,14 +27,7 @@
         <div class="dates">JANUARY 19 2019 • 17:30 PM</div>
         <div>don bosco crypt • mumbai</div>
         <div>reception to follow</div>
-      </div>
-      <div class="col-sm-9 col-12 text-right">
         <div>taj lands end • mumbai</div>
-      </div>
-      <div class="col-sm-3 text-left d-none d-sm-block">
-        <nuxt-link to="/card/locations/">
-          <span class="oi oi-map"></span>
-        </nuxt-link>
       </div>
     </div>
   </div>
@@ -42,6 +35,7 @@
 
 <script>
 export default {
-  layout: 'card'
+  layout: 'card',
+  nav: 'calendar'
 }
 </script>

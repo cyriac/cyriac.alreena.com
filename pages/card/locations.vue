@@ -6,7 +6,7 @@
       </div>
       <div class="col-sm-9 col-12 text-right order-12 order-sm-1">
         <address>
-          Crypt<br/>
+          <span>Crypt</span><br/>
           Shrine Of Don Bosco's Madonna<br />
           Matunga, Mumbai<br />
           Maharashtra - 400019
@@ -20,7 +20,7 @@
       </div>
       <div class="col-sm-9 col-12 text-right order-12 order-sm-1">
         <address>
-          Taj Lands End<br/>
+          <span>Taj Lands End</span><br/>
           Bandstand Fort, Byramji Jeejeebhoy Road<br />
           Mount Mary, Bandra West, Mumbai<br />
           Maharashtra 400050
@@ -28,41 +28,26 @@
         <a class="btn btn-sm btn-outline-dark" href="https://goo.gl/maps/iyqXhYxFMyS2" target="_blank">Map</a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 text-center">
-        <nuxt-link to="/card/">
-          <span class="oi oi-calendar"></span>
-        </nuxt-link>
-      </div>
-    </div>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .btn:hover {
   text-shadow: none;
 }
 .address {
-  margin: 10vh 0;
-}
-/* .map {
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%);
-  -o-filter: grayscale(100%);
-  filter: grayscale(100%);
-  &:hover {
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    filter: grayscale(0%);
+  margin-bottom: 10vh;
+  span {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
   }
-} */
+}
 </style>
 
 <script>
 export default {
-  layout: 'card'
+  layout: 'card',
+  nav: 'locations'
 }
 </script>
