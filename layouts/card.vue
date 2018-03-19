@@ -8,7 +8,7 @@
       </div>
       <div class="col-lg-8 col-md-10 col-12 order-3 order-sm-2">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body font-effect-canvas-print">
             <nuxt />
           </div>
         </div>
@@ -23,7 +23,7 @@
 </template>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+13px|Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Slabo+13px|Playfair+Display&effect=font-effect-3d|canvas-print');
 .btn-nav {
   margin: 3vh 0;
   border-radius: 0;

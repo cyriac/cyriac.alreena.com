@@ -1,7 +1,7 @@
 <template>
   <div class="counter">
-    <span class="remaining">{{ remaining }} days</span>
-    <nuxt-link to="/save-the-dates" class="date">{{ cdate }}</nuxt-link>
+    <span class="remaining font-effect-3d">{{ remaining }} days</span>
+    <nuxt-link to="/save-the-dates" class="date font-effect-3d">{{ cdate }}</nuxt-link>
   </div>
 </template>
 
