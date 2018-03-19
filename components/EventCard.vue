@@ -11,7 +11,8 @@
         <span class="oi oi-map"></span>
         <span>{{ event.location }}</span>
       </div>
-      <button class="btn btn btn-outline-light rsvp" v-on:click="comingsoon">RSVP</button>
+      <button class="btn btn btn-outline-light rsvp" v-on:click="comingsoon" v-if="!event.link">RSVP</button>
+      <nuxt-link to="/card/" class="btn btn btn-outline-light rsvp" v-else>CARD</nuxt-link>
     </div>
   </div>
 </template>
