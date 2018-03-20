@@ -7,7 +7,7 @@
         </nuxt-link>
       </div>
       <div class="col-lg-8 col-md-10 col-12 order-3 order-sm-2">
-        <div class="card">
+        <div class="card invitation">
           <div class="card-body font-effect-canvas-print">
             <nuxt />
           </div>
@@ -32,7 +32,7 @@
 img {
   margin: 20vh 0 5vh 0;
 }
-.card {
+.card.invitation {
   margin: 3vh 0;
   border: 3vh solid #555;
   border-radius: 0;
@@ -44,25 +44,25 @@ img {
   .card-body {
     min-height: 100vh;
     color: #555;
+    .names, .dates {
+      font-size: 2rem;
+      text-transform: uppercase;
+      line-height: 3rem;
+      font-weight: bold;
+      margin: 3vh 0;
+      font-style: normal
+    }
+    .dates {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 3vh 0;
+    }
+    .amp {
+      font-weight: normal;
+      font-size: 6rem;
+      line-height: 5.5rem;
+    }
   }
-}
-.names, .dates {
-  font-size: 2rem;
-  text-transform: uppercase;
-  line-height: 3rem;
-  font-weight: bold;
-  margin: 3vh 0;
-  font-style: normal
-}
-.dates {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 3vh 0;
-}
-.amp {
-  font-weight: normal;
-  font-size: 6rem;
-  line-height: 5.5rem;
 }
 </style>
 
