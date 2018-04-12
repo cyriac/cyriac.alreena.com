@@ -62,7 +62,7 @@ const eventData = {
     'bg': '/img/nitish-kadam-34748.jpg',
     'date': new Date('19 Jan 2019'),
     'location': 'Mumbai',
-    'link': '/card/'
+    'link': null
   },
   weddingreception: {
     'title': "Wedding Reception",
