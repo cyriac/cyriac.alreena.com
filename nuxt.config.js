@@ -24,6 +24,14 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#9013FE' },
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    baseURL: process.env.GENERATE_MODE === 'production' ? 'https://cyriac.alreena.com': 'http://localhost:3000',
+    browserBaseURL: process.env.GENERATE_MODE === 'production' ? 'https://cyriac.alreena.com': 'http://localhost:3000',
+    credentials: true
+  },
   /*
   ** Build configuration
   */

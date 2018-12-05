@@ -1,9 +1,28 @@
 <template>
   <section class="container">
     <div class="card-group">
-      <Card src="/img/cover.jpg" class="inv-card inv-card-cover" :class="{open: activeCard == 'cover'}" @click.native="cardClick('cover')"/>
-      <Card src="/img/mumbai.jpg" class="inv-card inv-card-mumbai" :class="{open: activeCard == 'mumbai'}" @click.native="cardClick('mumbai')"/>
-      <Card src="/img/kochi.jpg" class="inv-card inv-card-kochi" :class="{open: activeCard == 'kochi'}" @click.native="cardClick('kochi')"/>
+      <div v-if="!showCards" class="code">
+        <form class="form-inline pt-2 pr-2 pl-2">
+          <div class="form-group mb-2">
+            <label for="staticEmail2" class="sr-only">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="staticEmail2"
+              placeholder="Code"
+              v-model="code"
+              autofocus>
+          </div>
+          <button type="submit" class="btn btn-outline-secondary mb-2" @click.stop.prevent="displayCards">⏎</button>
+        </form>
+      </div>
+      <Card
+        v-else
+        v-for="c in cards"
+        :key="c"
+        :src="'/img/'+c+'-'+code+'.jpg'"
+        :class="'inv-card inv-card-'+c+(activeCard === c?' open':'')"
+        @click.native="cardClick(c)"/>
     </div>
   </section>
 </template>
@@ -14,13 +33,24 @@ import Card from '~/components/Card.vue'
 export default {
   data() {
     return {
-      activeCard: null
+      showCards: false,
+      activeCard: null,
+      cards: ['cover', 'mumbai', 'kochi'],
+      code: ''
     }
   },
   components: {
     Card
   },
   methods: {
+    displayCards(){
+      console.log(this.$route)
+      let url = '/img/' + this.cards[0] + '-' + this.code + '.jpg'
+      let self = this
+      this.$axios.$get(url).then((res) => {
+        self.showCards = true
+      })
+    },
     cardClick(card) {
       if (this.activeCard === card) {
         this.activeCard = null
@@ -33,6 +63,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.btn-outline-secondary {
+  margin-left: -42px;
+  border-width: 0;
+}
 .container {
   background: url('/img/vintage.jpg') no-repeat;
   background-size: 100% 100%;
@@ -42,7 +76,7 @@ export default {
   display: flex;
   max-width: 100%;
 }
-.inv-card {
+.inv-card, .code {
   max-height: 40vh;
   position: fixed;
   bottom: 10vh;
