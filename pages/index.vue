@@ -55,7 +55,7 @@ export default {
   &.open {
     left: 40vw;
     max-height: 80vh;
-    z-index: 1001;
+    // z-index: 1001;
     transform: rotate(0);
   }
 }
