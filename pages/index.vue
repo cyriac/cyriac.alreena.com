@@ -3,11 +3,11 @@
     <div v-if="!showCards" class="code">
       <form class="form-inline pt-2 pr-2 pl-2 rsvpcode">
         <div class="form-group mb-2">
-          <label for="staticEmail2" class="sr-only">Email</label>
+          <label for="staticCode" class="sr-only">Code</label>
           <input
             type="text"
-            class="form-control"
-            id="staticEmail2"
+            class="form-control form-control-lg"
+            id="staticCode"
             placeholder="Code"
             v-model="code"
             autofocus>
