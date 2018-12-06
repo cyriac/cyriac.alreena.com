@@ -49,5 +49,10 @@ module.exports = {
         })
       }
     }
+  },
+  generate: {
+    routes () {
+      return ['/rsvp/190119', '/rsvp/192619', '/rsvp/260119']
+    }
   }
 }
