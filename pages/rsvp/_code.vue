@@ -1,6 +1,13 @@
 <template>
   <no-ssr>
     <div class="mb-5">
+      <div class="row" v-if="error">
+        <div class="col-md-8">
+          <div class="alert alert-danger">
+            Invalid code. <nuxt-link to="/rsvp/" class="btn btn-danger">Try again</nuxt-link>
+          </div>
+        </div>
+      </div>
       <div class="text-cent mb-5" v-if="src">
         <h1 class="display-1 title">RSVP</h1>
       </div>
@@ -16,13 +23,6 @@
           <iframe :src="src" width="640" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="alert alert-danger">
-            Invalid code. <nuxt-link to="/rsvp/" class="btn btn-danger">Try again</nuxt-link>
-          </div>
-        </div>
-      </div>
     </div>
   </no-ssr>
 </template>
@@ -32,7 +32,8 @@ export default {
   data() {
     return {
       'src': null,
-      'images': []
+      'images': [],
+      'error': false
     }
   },
   mounted() {
@@ -41,7 +42,9 @@ export default {
     this.$axios.$get(url).then((res) => {
       self.src = res.url
       self.images = res.cards
-    })
+    }).catch(error => {
+      this.error = true
+    });
   }
 }
 </script>
