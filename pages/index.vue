@@ -1,28 +1,28 @@
 <template>
-  <section class="container">
-    <div class="card-group">
-      <div v-if="!showCards" class="code">
-        <form class="form-inline pt-2 pr-2 pl-2">
-          <div class="form-group mb-2">
-            <label for="staticEmail2" class="sr-only">Email</label>
-            <input
-              type="text"
-              class="form-control"
-              id="staticEmail2"
-              placeholder="Code"
-              v-model="code"
-              autofocus>
-          </div>
-          <button type="submit" class="btn btn-outline-secondary mb-2" @click.stop.prevent="displayCards">⏎</button>
-        </form>
-      </div>
+  <section>
+    <div v-if="!showCards" class="code">
+      <form class="form-inline pt-2 pr-2 pl-2 rsvpcode">
+        <div class="form-group mb-2">
+          <label for="staticEmail2" class="sr-only">Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="staticEmail2"
+            placeholder="Code"
+            v-model="code"
+            autofocus>
+        </div>
+        <button type="submit" class="btn btn-outline-secondary mb-2" @click.stop.prevent="displayCards">⏎</button>
+      </form>
+    </div>
+    <div class="card-group" v-if="showCards">
       <Card
-        v-else
-        v-for="c in cards"
-        :key="c"
-        :src="'/img/'+c+'-'+code+'.jpg'"
-        :class="'inv-card inv-card-'+c+(activeCard === c?' open':'')"
+        v-for="(c, i) in cards"
+        :key="i"
+        :src="c"
+        :class="'inv-card inv-card-'+String(i)+(activeCard === c?' open':'')"
         @click.native="cardClick(c)"/>
+        <nuxt-link class="btn btn-primary btn-rsvp" :to="'/rsvp/'+code">RSVP</nuxt-link>
     </div>
   </section>
 </template>
@@ -35,7 +35,7 @@ export default {
     return {
       showCards: false,
       activeCard: null,
-      cards: ['cover', 'mumbai', 'kochi'],
+      cards: ['/img/cover.jpg'],
       code: ''
     }
   },
@@ -44,10 +44,12 @@ export default {
   },
   methods: {
     displayCards(){
-      console.log(this.$route)
-      let url = '/img/' + this.cards[0] + '-' + this.code + '.jpg'
+      let url = '/rsvpcode/' + this.code + '.json'
       let self = this
       this.$axios.$get(url).then((res) => {
+        res.cards.forEach(c => {
+          self.cards.push(c)
+        })
         self.showCards = true
       })
     },
@@ -63,23 +65,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.btn-outline-secondary {
-  margin-left: -42px;
-  border-width: 0;
-}
-.container {
-  background: url('/img/vintage.jpg') no-repeat;
-  background-size: 100% 100%;
-  background-size: cover;
-  min-height: 100vh;
+body {
   max-height: 100vh;
-  display: flex;
-  max-width: 100%;
 }
-.inv-card, .code {
+.inv-card, .btn-rsvp {
   max-height: 40vh;
   position: fixed;
-  bottom: 10vh;
+  bottom: 20vh;
   left: 10vw;
   transform-origin: bottom center;
   transition-duration: 1s;
@@ -87,34 +79,39 @@ export default {
   overflow: hidden !important;
   cursor: pointer;
   &.open {
+    bottom: 10vh;
     left: 40vw;
     max-height: 80vh;
     // z-index: 1001;
     transform: rotate(0) !important;
   }
 }
+.btn-rsvp {
+  bottom: 10vh;
+  left: 27.5vh;
+}
 .card-group {
-  .inv-card-cover {
+  .inv-card-0 {
     z-index: 1000;
     transform: rotate(-5deg);
   }
-  .inv-card-mumbai {
+  .inv-card-1 {
     z-index: 999;
   }
-  .inv-card-kochi {
+  .inv-card-2 {
     z-index: 998;
     transform: rotate(5deg);
   }
   &:hover {
     .inv-card {
       &:hover {
-        bottom: 12.5vh;
+        bottom: 22.5vh;
       }
     }
-    .inv-card-cover {
+    .inv-card-0 {
       transform: rotate(-10deg);
     }
-    .inv-card-kochi {
+    .inv-card-2 {
       transform: rotate(10deg);
     }
   }
