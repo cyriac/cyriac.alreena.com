@@ -36,11 +36,16 @@ export default {
       showCards: false,
       activeCard: null,
       cards: ['/img/cover.jpg'],
-      code: ''
+      code: this.$store.state.access_code
     }
   },
   components: {
     Card
+  },
+  mounted() {
+    if (this.code.length > 0) {
+      this.displayCards()
+    }
   },
   methods: {
     displayCards(){
@@ -51,6 +56,7 @@ export default {
           self.cards.push(c)
         })
         self.showCards = true
+        self.$store.commit('setCode', this.code)
       })
     },
     cardClick(card) {
@@ -84,6 +90,9 @@ body {
     max-height: 80vh;
     // z-index: 1001;
     transform: rotate(0) !important;
+    &:hover {
+      bottom: 12.5vh !important;
+    }
   }
 }
 .btn-rsvp {

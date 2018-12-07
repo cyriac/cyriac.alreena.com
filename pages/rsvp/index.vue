@@ -18,7 +18,12 @@
 export default {
   data() {
     return {
-      code: ''
+      code: this.$store.state.access_code
+    }
+  },
+  mounted() {
+    if (this.code.length > 0) {
+      this.displayCards()
     }
   },
   methods: {

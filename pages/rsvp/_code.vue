@@ -37,11 +37,13 @@ export default {
     }
   },
   mounted() {
-    let url = '/rsvpcode/' + this.$route.params.code.split('-')[0] + '.json'
+    let code = this.$route.params.code.split('-')[0]
+    let url = '/rsvpcode/' + code + '.json'
     let self = this
     this.$axios.$get(url).then((res) => {
       self.src = res.url
       self.images = res.cards
+      self.$store.commit('setCode', code)
     }).catch(error => {
       this.error = true
     });
