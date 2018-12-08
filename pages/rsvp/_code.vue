@@ -15,7 +15,7 @@
         <div :class="cardWrapperClasses" v-for="(card, i) in images" :key="i">
           <img :src="card" class="card w-100 mb-5"/>
         </div>
-        <div class="col">
+        <div class="col wrap-me-loader">
           <iframe :src="src" width="100%" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
       </div>
@@ -59,3 +59,11 @@ export default {
   }
 }
 </script>
+
+
+<style>
+.wrap-me-loader {
+  background: url('/img/form-loader.gif') no-repeat top center;
+  background-size: 80% auto;
+}
+</style>
