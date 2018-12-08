@@ -12,15 +12,11 @@
         <h1 class="display-1 title">RSVP</h1>
       </div>
       <div class="row" v-if="src">
-        <div class="col-12 col-md-8">
-          <div class="row">
-            <div class="col" v-for="(card, i) in images" :key="i">
-              <img :src="card" class="card w-100"/>
-            </div>
-          </div>
+        <div :class="cardWrapperClasses" v-for="(card, i) in images" :key="i">
+          <img :src="card" class="card w-100 mb-5"/>
         </div>
-        <div class="col-12 col-md-4">
-          <iframe :src="src" width="640" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        <div class="col">
+          <iframe :src="src" width="100%" height="900px" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
       </div>
     </div>
@@ -34,6 +30,19 @@ export default {
       'src': null,
       'images': [],
       'error': false
+    }
+  },
+  computed: {
+    cardWrapperClasses() {
+      let cls = ''
+      if (this.src !== null) {
+        if (this.images.length == 2) {
+          cls = 'col-12 col-sm-4'
+        } else {
+          cls = 'col-12 col-sm-6'
+        }
+      }
+      return cls
     }
   },
   mounted() {

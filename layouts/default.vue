@@ -25,7 +25,7 @@ body {
   background-size: 100% 100%;
   background-size: cover;
   min-height: 100vh;
-  display: flex;
+  /* display: flex; */
   max-width: 100%;
   max-height: 100vh;
   overflow-x: hidden;

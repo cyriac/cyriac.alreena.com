@@ -24,6 +24,9 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#333333' },
+  plugins: [
+    { src: '~/plugins/vuex-persist', ssr: false }
+  ],
   modules: [
     '@nuxtjs/axios',
   ],
