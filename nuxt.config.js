@@ -1,13 +1,18 @@
+const website_title = "Alreena and Cyriac"
+const description = "Alreena and Cyriac's wedding"
+const website_domain = "https://cyriac.alreena.com"
+const codes = ['190119', '192619', '260119']
+
 module.exports = {
   /*
   ** Headers of the page
   */
   head: {
-    title: 'Alreena and Cyriac',
+    title: website_title,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Alreena and Cyriac' }
+      { hid: 'description', name: 'description', content: description }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -31,8 +36,8 @@ module.exports = {
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: process.env.GENERATE_MODE === 'production' ? 'https://cyriac.alreena.com': 'http://localhost:3000',
-    browserBaseURL: process.env.GENERATE_MODE === 'production' ? 'https://cyriac.alreena.com': 'http://localhost:3000',
+    baseURL: process.env.GENERATE_MODE === 'production' ? website_domain: 'http://localhost:3000',
+    browserBaseURL: process.env.GENERATE_MODE === 'production' ? website_domain: 'http://localhost:3000',
     credentials: true
   },
   /*
@@ -55,7 +60,11 @@ module.exports = {
   },
   generate: {
     routes () {
-      return ['/rsvp/190119', '/rsvp/192619', '/rsvp/260119']
+      routes = []
+      codes.forEach(code => {
+        routes.push('/rsvp/' + code)
+      })
+      return routes
     }
   }
 }
